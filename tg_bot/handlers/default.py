@@ -12,7 +12,7 @@ async def default_message(callback_query: CallbackQuery, state: FSMContext):
     await state.update_data(offset=0)
     await state.update_data(full_count=0)
     chosen_gender = user_data['chosen_gender'] if user_data.get('chosen_gender') else "не выбрано"
-    chosen_category = user_data['chosen_category'] if user_data.get('chosen_category') else "не выбрана"
+    chosen_category = ', '.join(user_data['chosen_categories']) if user_data.get('chosen_categories') else "не выбраны"
     chosen_brands = ', '.join(user_data['chosen_brands']) if user_data.get('chosen_brands') else "не выбраны"
 
     all_types_kb = generate_default_keyboard('chosen_brands' in user_data.keys())

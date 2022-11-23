@@ -13,11 +13,13 @@ from states import UserFilters
 @session_db
 async def cmd_category(callback_query: CallbackQuery, state: FSMContext, session: AsyncSession, category_list=None):
     await callback_query.answer()
+    user_data = await state.get_data()
     if not category_list:
         category_list = await Category.get_all(session)
-        category_types_kb = await generate_category_buttons(category_list)
+        category_types_kb = await generate_category_buttons(category_list, user_data.get('chosen_categories', []))
     else:
-        category_types_kb = await generate_category_buttons(category_list, child=True)
+        category_types_kb = await generate_category_buttons(category_list, user_data.get('chosen_categories', []),
+                                                            child=True)
 
     await callback_query.message.edit_text("Выберите категорию: ", reply_markup=category_types_kb)
     await state.set_state(UserFilters.choosing_category)
@@ -26,18 +28,24 @@ async def cmd_category(callback_query: CallbackQuery, state: FSMContext, session
 @session_db
 async def category_chosen(callback_query: CallbackQuery, state: FSMContext, session: AsyncSession):
     await callback_query.answer()
+    user_data = await state.get_data()
 
     category = callback_query.data
+    chosen_categories = user_data['chosen_categories'] if 'chosen_categories' in user_data.keys() else []
     if category == 'delete':
         await state.update_data(chosen_category=None)
     elif category != 'back':
         category_id = await Category.get_id(session, category)
         sub_category_list = await Category.get_child(session, category_id)
-        await state.update_data(chosen_category=category)
+        if category in chosen_categories:
+            chosen_categories.remove(category)
+        else:
+            chosen_categories.append(category)
+        await state.update_data(chosen_categories=chosen_categories)
         if sub_category_list:
             await cmd_category(callback_query, state, category_list=sub_category_list)
         else:
-            await default_message(callback_query, state)
+            await cmd_category(callback_query, state)
 
 
 async def category_error(callback_query: CallbackQuery, state: FSMContext):

@@ -40,7 +40,7 @@ async def brand_chosen(callback_query: CallbackQuery, state: FSMContext):
         await state.update_data(chosen_brands=chosen_brands)
         await cmd_brands(callback_query, state)
     else:
-        await default_message(callback_query.message, state)
+        await default_message(callback_query, state)
 
 
 async def brand_error(callback_query: CallbackQuery, state: FSMContext):

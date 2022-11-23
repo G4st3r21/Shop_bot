@@ -3,8 +3,8 @@ from aiogram.dispatcher import FSMContext
 from aiogram.types import CallbackQuery
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from tg_bot.models import Category
-from tg_bot.db_session import session_db
+from models import Category
+from db_session import session_db
 from handlers.default import default_message
 from keys.category import generate_category_buttons
 from states import UserFilters

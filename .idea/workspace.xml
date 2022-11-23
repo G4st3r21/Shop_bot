@@ -4,14 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="first commit" />
+    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg_bot/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg_bot/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/-1155213776635117.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/-1200038239116513.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/-1263582230685419.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/-1423992312428861.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/-3967654575703243.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/-5071891463802437.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/-6488916117741874.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/-7033789242144303.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/-7417030845138309.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/-8020733569986769.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/144013226606228.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/2395558686146279.970" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/2932052852587236.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/4075203661373324.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/4128499117967938.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/4216452833842270.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/5326457671094527.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/6477805409458765.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/6598836739370357.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/6961151069158888.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/brands.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/brands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/products.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/products.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/models/models.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="119017" />
+    <option name="totalTimeSeconds" value="3935" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -33,26 +70,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/g4st3r/PycharmProjects/Shop_bot&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Project.color": "1d320c",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/gagik/PycharmProjects/wbstonks-api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tg_bot" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/models" />
@@ -155,6 +197,8 @@
       <workItem from="1669130803690" duration="78000" />
       <workItem from="1669130893907" duration="91000" />
       <workItem from="1669131069325" duration="184000" />
+      <workItem from="1669147706960" duration="621000" />
+      <workItem from="1669231490576" duration="5401000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1669131164998</created>
@@ -188,10 +232,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LearningProject$main.coverage" NAME="main Coverage Results" MODIFIED="1667917684712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Shop_service$run.coverage" NAME="run Coverage Results" MODIFIED="1668085023844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$main.coverage" NAME="main Coverage Results" MODIFIED="1667917684712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$LearningProject.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1667918004651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/Shop_service$FastAPI_run.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1668171455137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../" />
     <SUITE FILE_PATH="coverage/Shop_service$main.coverage" NAME="main Coverage Results" MODIFIED="1668089998208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$LearningProject.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1667918004651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
   </component>
 </project>

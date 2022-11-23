@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  bot:
+    container_name: bot
+    restart: on-failure
+    build:
+      context: tg_bot/
+      dockerfile: Dockerfile
+    volumes:
+      - ./static:/home/tg_bot/static
+    env_file:
+      - tg_bot/.env
+    network_mode: "host"
+
+  admin:
+    container_name: admin
+    restart: on-failure
+    build:
+      context: app/
+      dockerfile: Dockerfile
+    env_file:
+      - app/.env
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - ./static:/home/app/static
+    network_mode: "host"

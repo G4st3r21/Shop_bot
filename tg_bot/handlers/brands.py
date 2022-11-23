@@ -4,9 +4,9 @@ from aiogram.types import CallbackQuery
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from handlers.default import default_message
-from tg_bot.db_session import session_db
+from db_session import session_db
 from keys.brands import generate_brand_buttons
-from tg_bot.models import Brand
+from models import Brand
 from states import UserFilters
 
 

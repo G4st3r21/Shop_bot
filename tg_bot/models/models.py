@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from tg_bot.db_session import SqlAlchemyBase
+from db_session import SqlAlchemyBase
 from sqlalchemy import Column, String, Integer, Boolean, ForeignKey, Table, select, update, func
 
 

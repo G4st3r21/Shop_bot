@@ -15,15 +15,16 @@ from auth import CheckUser, decode_jwt
 from db_session import global_init, create_session
 from views import BrandView, CategoryView, SellerView, ProductView, PictureView
 from models import SqlAlchemyBase, Picture
+from admin_config import *
 
 app = FastAPI()
-engine = global_init('postgres', '0203', 'localhost', '5432', 'project-test')
+engine = global_init(DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME)
 authentication_backend = CheckUser(secret_key=JWT_SECRET)
 admin = Admin(app, engine, authentication_backend=authentication_backend)
 session = create_session()
 CategoryView.async_engine = engine
 
-# app.mount("../static", StaticFiles(directory="/static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 app.add_middleware(SessionMiddleware, secret_key=JWT_SECRET)
 
 

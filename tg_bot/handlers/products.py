@@ -5,8 +5,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from keys.products import generate_product_keyboard
 from states import UserFilters
-from tg_bot.db_session import session_db
-from tg_bot.models import Product, Seller, Picture
+from db_session import session_db
+from models import Product, Seller, Picture
 
 
 async def get_product_media_group(pictures):

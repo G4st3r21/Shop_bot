@@ -16,7 +16,7 @@ async def get_product_media_group(pictures):
     media = MediaGroup()
     for picture in pictures:
         if not picture.file_id:
-            media.attach_photo(InputFile('../static/img/' + picture.link))
+            media.attach_photo(InputFile('static/img/' + picture.link))
         else:
             media.attach_photo(picture.file_id)
 

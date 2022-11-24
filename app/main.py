@@ -37,7 +37,7 @@ async def upload_file(request: Request, parent_id: int = Form(), files: List[Upl
         file_extension = file.filename.split(".")[1]
         file.filename = f"{new_filename}.{file_extension}"
 
-        async with aiofiles.open('../static/img/' + file.filename, "wb") as pic:
+        async with aiofiles.open('static/img/' + file.filename, "wb") as pic:
             await pic.write(await file.read())
 
         db_picture = Picture(link=file.filename, parent_id=parent_id)
@@ -49,7 +49,7 @@ async def upload_file(request: Request, parent_id: int = Form(), files: List[Upl
 
 async def init_models():
     async with engine.begin() as conn:
-        await conn.run_sync(SqlAlchemyBase.metadata.drop_all)
+        # await conn.run_sync(SqlAlchemyBase.metadata.drop_all)
         await conn.run_sync(SqlAlchemyBase.metadata.create_all)
 
 

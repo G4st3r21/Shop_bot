@@ -21,7 +21,6 @@ app = FastAPI()
 engine = global_init(DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME)
 authentication_backend = CheckUser(secret_key=JWT_SECRET)
 admin = Admin(app, engine, authentication_backend=authentication_backend)
-session = create_session()
 CategoryView.async_engine = engine
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -39,10 +38,10 @@ async def upload_file(request: Request, parent_id: int = Form(), files: List[Upl
 
         async with aiofiles.open('static/img/' + file.filename, "wb") as pic:
             await pic.write(await file.read())
-
-        db_picture = Picture(link=file.filename, parent_id=parent_id)
-        session.add(db_picture)
-        await session.commit()
+        async with create_session() as session:
+            db_picture = Picture(link=file.filename, parent_id=parent_id)
+            session.add(db_picture)
+            await session.commit()
 
     return RedirectResponse('/admin/picture/list', status_code=302)
 

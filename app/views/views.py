@@ -17,6 +17,11 @@ class CategoryView(ModelView, model=Category):
     name = "Категория"
     name_plural = "Категории"
     column_list = [Category.id, Category.title]
+    column_labels = {
+        Category.id: "ID Категории",
+        Category.title: "Название категории",
+        Category.parent: "ID Старшей категории"
+    }
     form_include_pk = True
     form_excluded_columns = ["id"]
 

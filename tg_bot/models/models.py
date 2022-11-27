@@ -47,8 +47,8 @@ class Category(SqlAlchemyBase):
         return _.scalars().all()
 
     @classmethod
-    async def get_all(cls, session: AsyncSession):
-        _ = await session.execute(select(cls))
+    async def get_all(cls, session: AsyncSession, parent_id=None):
+        _ = await session.execute(select(cls.title).where(cls.parent == parent_id))
         return _.scalars().all()
 
     @classmethod

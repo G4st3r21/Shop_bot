@@ -37,24 +37,17 @@ class Category(SqlAlchemyBase):
     title = Column(String, nullable=False, unique=True)
 
     @classmethod
-    async def get_id(cls, session: AsyncSession, title):
-        _ = await session.execute(select(cls).where(cls.title == title))
+    async def get_object(cls, session: AsyncSession, title: str = None, id: int = None):
+        if title:
+            _ = await session.execute(select(cls).where(cls.title == title))
+        else:
+            _ = await session.execute(select(cls).where(cls.id == id))
         return _.scalar()
-
-    @classmethod
-    async def get_child(cls, session: AsyncSession, parent_id):
-        _ = await session.execute(select(cls).where(cls.parent == parent_id))
-        return _.scalars().all()
 
     @classmethod
     async def get_all(cls, session: AsyncSession, parent_id=None):
-        _ = await session.execute(select(cls.title).where(cls.parent == parent_id))
+        _ = await session.execute(select(cls).where(cls.parent == parent_id))
         return _.scalars().all()
-
-    @classmethod
-    async def get_id(cls, session: AsyncSession, title: str):
-        _ = await session.execute(select(cls.id).where(cls.title == title))
-        return _.scalar()
 
 
 class Seller(SqlAlchemyBase):
@@ -113,24 +106,19 @@ class Product(SqlAlchemyBase):
             gender = True if chosen_gender == 'мужской' else False
         else:
             gender = None
-        category_id = await Category.get_id(session, chosen_category) if chosen_category else None
-        brands_id = await Brand.get_all_id(session, chosen_brands)
+        category_id = await Category.get_object(session, chosen_category) if chosen_category else None
+        brands_id = await Brand.get_all_id(session, chosen_brands) if chosen_brands else None
 
         if not need_count:
-            query = select(cls).where(
-                cls.is_sold == False,
-                cls.brand_id.in_(brands_id)
-            ).offset(offset).limit(limit)
+            query = select(cls).where(cls.is_sold == False).offset(offset).limit(limit)
         else:
-            query = select([func.count()]).select_from(cls).where(
-                cls.is_sold == False,
-                cls.brand_id.in_(brands_id)
-            )
-
+            query = select([func.count()]).select_from(cls).where(cls.is_sold == False)
+        if brands_id:
+            query = query.where(cls.brand_id.in_(brands_id))
         if gender:
             query = query.where(cls.male == gender)
         if category_id:
-            query = query.where(cls.category_id == category_id)
+            query = query.where(cls.category_id.in_(category_id))
 
         _ = await session.execute(query)
 

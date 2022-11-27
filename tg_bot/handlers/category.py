@@ -25,14 +25,40 @@ async def cmd_category(callback_query: CallbackQuery, state: FSMContext, session
     await state.set_state(UserFilters.choosing_category)
 
 
-def get_all_categories(session: AsyncSession, user_data, parent_id=None):
-    all_categories = Category.get_all(session, parent_id)
+async def check_all_child(session: AsyncSession, all_categories):
+    for category in all_categories:
+        child = await Category.get_all(session, category.id)
+        if child:
+            all_categories += await check_all_child(session, child)
+
+    return all_categories
+
+
+async def check_parents_is_chosen(session: AsyncSession, chosen_categories: list):  # ДОДУМАТЬ
+    db_category_parent = []
+    db_category = await Category.get_object(session, chosen_categories[0])
+    if db_category.parent:
+        db_category_parent.append(await Category.get_all(session, db_category.parent))
+
+    for parent in db_category_parent[0]:
+        child = [child.title for child in await Category.get_all(session, parent.parent)]
+        if child in chosen_categories:
+            chosen_categories.append((await Category.get_object(session, parent.id)).title)
+
+
+async def get_all_categories(session: AsyncSession, user_data, parent_id=None):
+    all_categories = await Category.get_all(session, parent_id)
+    all_categories = [category.title for category in await check_all_child(session, all_categories)]
+
     chosen_categories: list = user_data['chosen_categories'] if 'chosen_categories' in user_data.keys() else []
 
-    if all_categories in chosen_categories:
-        chosen_categories -= chosen_categories
+    if sorted(all_categories) == sorted(chosen_categories):
+        for category in all_categories:
+            chosen_categories.remove(category)
     else:
         chosen_categories += all_categories
+
+    await check_parents_is_chosen(session, chosen_categories)
     chosen_categories = list(set(chosen_categories))
 
     return chosen_categories
@@ -45,26 +71,30 @@ async def category_chosen(callback_query: CallbackQuery, state: FSMContext, sess
 
     category = callback_query.data
     chosen_categories = user_data['chosen_categories'] if 'chosen_categories' in user_data.keys() else []
-    parent_category = user_data['paren_category'] if 'paren_category' in user_data.keys() else None
+    parent_category = user_data['parent_category'] if 'parent_category' in user_data.keys() else None
 
     if category == 'delete':
-        await state.update_data(chosen_category=None)
+        await state.update_data(chosen_categories=[])
+        await cmd_category(callback_query, state)
     elif category != 'back':
-        category_id = await Category.get_id(session, category)
-        sub_category_list = await Category.get_child(session, category_id)
+        category_id = (await Category.get_object(session, category)).id if category != 'all' else None
+        if category_id:
+            sub_category_list = await Category.get_all(session, category_id)
+        else:
+            sub_category_list = []
 
         if category == 'all':
-            chosen_categories = get_all_categories(session, parent_category)
+            parent_id = (await Category.get_object(session, parent_category)).id
+            chosen_categories = await get_all_categories(session, user_data, parent_id)
         elif sub_category_list:
             await state.update_data(parent_category=category)
-            await cmd_category(callback_query, state, category_list=sub_category_list)
         elif category in chosen_categories:
             chosen_categories.remove(category)
         else:
             chosen_categories.append(category)
 
         await state.update_data(chosen_categories=chosen_categories)
-        await cmd_category(callback_query, state)
+        await cmd_category(callback_query, state, category_list=sub_category_list)
 
 
 async def category_error(callback_query: CallbackQuery, state: FSMContext):

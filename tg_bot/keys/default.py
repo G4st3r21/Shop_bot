@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-def generate_default_keyboard(show_product=False):
+def generate_default_keyboard(show_product=True):
     button_gender = InlineKeyboardButton('Пол', callback_data="gender")
     button_categories = InlineKeyboardButton('Категории', callback_data="categories")
     button_brands = InlineKeyboardButton('Бренды', callback_data="brands")

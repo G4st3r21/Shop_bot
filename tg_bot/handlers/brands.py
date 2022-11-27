@@ -28,12 +28,27 @@ async def cmd_brands(callback_query: CallbackQuery, state: FSMContext, session: 
     await UserFilters.choosing_brand.set()
 
 
-async def brand_chosen(callback_query: CallbackQuery, state: FSMContext):
+async def get_all_brands(session: AsyncSession, user_data):
+    all_brands = [brand.title for brand in await Brand.get_all(session)]
+    chosen_brands: list = user_data['chosen_brands'] if 'chosen_brands' in user_data.keys() else []
+
+    if sorted(chosen_brands) == sorted(all_brands):
+        return []
+    return all_brands
+
+
+@session_db
+async def brand_chosen(callback_query: CallbackQuery, state: FSMContext, session: AsyncSession):
     user_data = await state.get_data()
     brand = callback_query.data
-    if brand != 'back':
+    if brand == 'delete':
+        await state.update_data(chosen_brands=[])
+        await cmd_brands(callback_query, state)
+    elif brand != 'back':
         chosen_brands = user_data['chosen_brands'] if 'chosen_brands' in user_data.keys() else []
-        if brand in chosen_brands:
+        if brand == 'all':
+            chosen_brands = await get_all_brands(session, user_data)
+        elif brand in chosen_brands:
             chosen_brands.remove(brand)
         else:
             chosen_brands.append(brand)

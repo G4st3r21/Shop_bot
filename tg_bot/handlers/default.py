@@ -15,7 +15,7 @@ async def default_message(callback_query: CallbackQuery, state: FSMContext):
     chosen_category = ', '.join(user_data['chosen_categories']) if user_data.get('chosen_categories') else "не выбраны"
     chosen_brands = ', '.join(user_data['chosen_brands']) if user_data.get('chosen_brands') else "не выбраны"
 
-    all_types_kb = generate_default_keyboard('chosen_brands' in user_data.keys())
+    all_types_kb = generate_default_keyboard()
     await callback_query.message.edit_text(
         f"Вами были выбраны следующие фильтры:\n"
         f"-Пол: {chosen_gender}\n"
@@ -27,7 +27,7 @@ async def default_message(callback_query: CallbackQuery, state: FSMContext):
 
 
 async def welcome_message(message: Message):
-    all_types_kb = generate_default_keyboard(False)
+    all_types_kb = generate_default_keyboard()
     await message.answer(
         "Здравствуйте!\nЯ бот помогающий с покупкой одежды!\n"
         "Пожалуйста выберите следующие фильтры товаров.\n(в дальнейшем их можно будет редактировать)",

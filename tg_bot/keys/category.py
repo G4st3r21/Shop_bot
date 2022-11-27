@@ -4,7 +4,6 @@ from models import Category
 
 
 async def generate_category_buttons(category_list: list[Category], chosen_categories, child=False):
-    print(category_list)
     category_types_kb = InlineKeyboardMarkup(row_width=2)
     if child:
         categories = [

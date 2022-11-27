@@ -12,6 +12,10 @@ def generate_brand_buttons(brand_list: list[Brand], chosen_brands: list[str]):
     ]
 
     brands_types_kb.add(*brands)
-    brands_types_kb.add(InlineKeyboardButton('Назад', callback_data='back'))
+    brands_types_kb.row(
+        InlineKeyboardButton("Выбрать всё", callback_data="all"),
+        InlineKeyboardButton('Сбросить', callback_data='delete'),
+        InlineKeyboardButton('Назад', callback_data='back')
+    )
 
     return brands_types_kb

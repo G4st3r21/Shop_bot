@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="">
+    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="отладка">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/brands.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/brands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/keys/brands.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/keys/brands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/keys/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/keys/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/keys/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/keys/default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/models/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="138522" />
+    <option name="totalTimeSeconds" value="147631" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -35,27 +44,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Project.color": "1d320c",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/g4st3r/PycharmProjects/Shop_bot/app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "Docker"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;1d320c&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/g4st3r/PycharmProjects/Shop_bot/tg_bot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Docker&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tg_bot" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -65,7 +75,7 @@
       <recent name="$PROJECT_DIR$/app/models" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.tg_bot/Dockerfile">
+  <component name="RunManager" selected="Python.bot">
     <configuration name="FastAPI run" type="PythonConfigurationType" factoryName="Python">
       <module name="Shop_bot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,6 +94,28 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Shop_bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tg_bot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tg_bot/bot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
@@ -142,9 +174,11 @@
       <item itemvalue="Docker.compose.yaml: Compose Deployment" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.FastAPI run" />
+      <item itemvalue="Python.bot" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bot" />
         <item itemvalue="Docker.tg_bot/Dockerfile" />
         <item itemvalue="Docker.compose.yaml: Compose Deployment" />
       </list>
@@ -174,7 +208,8 @@
       <workItem from="1669375769843" duration="4409000" />
       <workItem from="1669380578044" duration="14633000" />
       <workItem from="1669415641289" duration="45000" />
-      <workItem from="1669558057109" duration="5624000" />
+      <workItem from="1669558057109" duration="6309000" />
+      <workItem from="1669570382628" duration="9397000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1669131164998</created>
@@ -190,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669560575749</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="отладка">
+      <created>1669569988308</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669569988308</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,12 +255,34 @@
     </ignored-roots>
     <MESSAGE value="first commit" />
     <MESSAGE value="button &quot;сбросить всё&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="button &quot;сбросить всё&quot;" />
+    <MESSAGE value="отладка" />
+    <option name="LAST_COMMIT_MESSAGE" value="отладка" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tg_bot/handlers/brands.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tg_bot/handlers/products.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tg_bot/handlers/category.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LearningProject$main.coverage" NAME="main Coverage Results" MODIFIED="1667917684712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Shop_bot$FastAPI_run.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1669143413888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../" />
-    <SUITE FILE_PATH="coverage/Shop_bot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1669204259850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tg_bot" />
+    <SUITE FILE_PATH="coverage/Shop_bot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1669580847758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tg_bot" />
     <SUITE FILE_PATH="coverage/Shop_service$run.coverage" NAME="run Coverage Results" MODIFIED="1668085023844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Shop_service$FastAPI_run.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1668171455137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../" />
     <SUITE FILE_PATH="coverage/Shop_service$main.coverage" NAME="main Coverage Results" MODIFIED="1668089998208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

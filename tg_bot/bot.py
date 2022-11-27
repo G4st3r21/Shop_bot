@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 
 async def main():
     await global_init(DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME)
+
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",

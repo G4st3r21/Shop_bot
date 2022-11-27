@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/keys/brands.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/keys/brands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/keys/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/keys/category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/models/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="137082" />
+    <option name="totalTimeSeconds" value="138522" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -182,7 +174,7 @@
       <workItem from="1669375769843" duration="4409000" />
       <workItem from="1669380578044" duration="14633000" />
       <workItem from="1669415641289" duration="45000" />
-      <workItem from="1669558057109" duration="2499000" />
+      <workItem from="1669558057109" duration="5624000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1669131164998</created>
@@ -191,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669131164998</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="button &quot;сбросить всё&quot;">
+      <created>1669560575749</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669560575749</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +212,8 @@
       <path value="$PROJECT_DIR$/fastapi-sqlmodel-alembic" />
     </ignored-roots>
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="button &quot;сбросить всё&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="button &quot;сбросить всё&quot;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LearningProject$main.coverage" NAME="main Coverage Results" MODIFIED="1667917684712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

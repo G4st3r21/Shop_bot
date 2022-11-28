@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="Исправил логику выбора категорий">
+    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="Поправил метод get_all класса Products models.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="150709" />
+    <option name="totalTimeSeconds" value="152284" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -200,7 +202,7 @@
       <workItem from="1669380578044" duration="14633000" />
       <workItem from="1669415641289" duration="45000" />
       <workItem from="1669558057109" duration="6309000" />
-      <workItem from="1669570382628" duration="12539000" />
+      <workItem from="1669570382628" duration="15017000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1669131164998</created>
@@ -244,7 +246,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669642476828</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Поправил Dockerfile">
+      <created>1669642907967</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669642907967</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Поправил метод get_all класса Products models.py">
+      <created>1669647368920</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669647368920</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Поправил метод get_all класса Products models.py">
+      <created>1669647407812</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669647407812</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +294,9 @@
     <MESSAGE value="отладка категорий" />
     <MESSAGE value="Не ту БД подключил(" />
     <MESSAGE value="Исправил логику выбора категорий" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил логику выбора категорий" />
+    <MESSAGE value="Поправил Dockerfile" />
+    <MESSAGE value="Поправил метод get_all класса Products models.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поправил метод get_all класса Products models.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -284,7 +309,7 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tg_bot/handlers/products.py</url>
           <line>33</line>
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -292,7 +317,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LearningProject$main.coverage" NAME="main Coverage Results" MODIFIED="1667917684712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Shop_bot$FastAPI_run.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1669143413888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../" />
-    <SUITE FILE_PATH="coverage/Shop_bot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1669642122564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tg_bot" />
+    <SUITE FILE_PATH="coverage/Shop_bot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1669647179145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tg_bot" />
     <SUITE FILE_PATH="coverage/Shop_service$run.coverage" NAME="run Coverage Results" MODIFIED="1668085023844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Shop_service$FastAPI_run.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1668171455137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../" />
     <SUITE FILE_PATH="coverage/Shop_service$main.coverage" NAME="main Coverage Results" MODIFIED="1668089998208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

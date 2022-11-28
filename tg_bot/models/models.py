@@ -49,6 +49,18 @@ class Category(SqlAlchemyBase):
         _ = await session.execute(select(cls).where(cls.parent == parent_id))
         return _.scalars().all()
 
+    @classmethod
+    async def get_all_id(cls, session: AsyncSession, category_list):
+        if len(category_list) < 0:
+            return []
+
+        category_id_list = [
+            (
+                await session.execute(select(cls).where(cls.title == category_title))
+            ).scalar().id for category_title in category_list
+        ]
+        return category_id_list
+
 
 class Seller(SqlAlchemyBase):
     __tablename__ = 'sellers'
@@ -100,13 +112,13 @@ class Product(SqlAlchemyBase):
         return _.scalar()
 
     @classmethod
-    async def get_all(cls, session: AsyncSession, chosen_gender, chosen_category, chosen_brands, offset=0, limit=None,
+    async def get_all(cls, session: AsyncSession, chosen_gender, chosen_categories, chosen_brands, offset=0, limit=None,
                       need_count=False):
         if chosen_gender:
             gender = True if chosen_gender == 'мужской' else False
         else:
             gender = None
-        category_id = await Category.get_object(session, chosen_category) if chosen_category else None
+        categories_id = await Category.get_all_id(session, chosen_categories) if chosen_categories else None
         brands_id = await Brand.get_all_id(session, chosen_brands) if chosen_brands else None
 
         if not need_count:
@@ -117,8 +129,8 @@ class Product(SqlAlchemyBase):
             query = query.where(cls.brand_id.in_(brands_id))
         if gender:
             query = query.where(cls.male == gender)
-        if category_id:
-            query = query.where(cls.category_id.in_(category_id))
+        if categories_id:
+            query = query.where(cls.category_id.in_(categories_id))
 
         _ = await session.execute(query)
 

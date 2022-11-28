@@ -34,7 +34,7 @@ async def show_products(callback_query: CallbackQuery, state: FSMContext, sessio
     await callback_query.answer()
     user_data = await state.get_data()
     chosen_gender = user_data['chosen_gender'] if 'chosen_gender' in user_data else []
-    chosen_category = user_data['chosen_category'] if 'chosen_category' in user_data else []
+    chosen_categories = user_data['chosen_categories'] if 'chosen_categories' in user_data else []
     chosen_brands = user_data['chosen_brands'] if 'chosen_brands' in user_data else []
     if 'offset' not in user_data:
         offset = 0
@@ -44,12 +44,12 @@ async def show_products(callback_query: CallbackQuery, state: FSMContext, sessio
     if offset == 0:
         await callback_query.message.delete()
 
-    product_list = await Product.get_all(session, chosen_gender, chosen_category, chosen_brands,
+    product_list = await Product.get_all(session, chosen_gender, chosen_categories, chosen_brands,
                                          offset, 5)
     offset += len(product_list)
     await state.update_data(offset=offset)
 
-    full_count = await Product.get_all(session, chosen_gender, chosen_category, chosen_brands, need_count=True)
+    full_count = await Product.get_all(session, chosen_gender, chosen_categories, chosen_brands, need_count=True)
     await state.update_data(full_count=full_count)
 
     if not product_list:

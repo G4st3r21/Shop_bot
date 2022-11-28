@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="отладка">
+    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="Не ту БД подключил(">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/brands.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/brands.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/handlers/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/keys/brands.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/keys/brands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/keys/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/keys/category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/keys/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/keys/default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/models/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="147631" />
+    <option name="totalTimeSeconds" value="150132" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -209,7 +203,7 @@
       <workItem from="1669380578044" duration="14633000" />
       <workItem from="1669415641289" duration="45000" />
       <workItem from="1669558057109" duration="6309000" />
-      <workItem from="1669570382628" duration="9397000" />
+      <workItem from="1669570382628" duration="11892000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1669131164998</created>
@@ -232,7 +226,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669569988308</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="отладка категорий">
+      <created>1669581058211</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669581058211</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Не ту БД подключил(">
+      <created>1669581208260</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669581208260</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +264,9 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="button &quot;сбросить всё&quot;" />
     <MESSAGE value="отладка" />
-    <option name="LAST_COMMIT_MESSAGE" value="отладка" />
+    <MESSAGE value="отладка категорий" />
+    <MESSAGE value="Не ту БД подключил(" />
+    <option name="LAST_COMMIT_MESSAGE" value="Не ту БД подключил(" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -273,8 +283,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tg_bot/handlers/category.py</url>
-          <line>42</line>
-          <option name="timeStamp" value="17" />
+          <line>72</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tg_bot/handlers/category.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -282,7 +297,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LearningProject$main.coverage" NAME="main Coverage Results" MODIFIED="1667917684712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Shop_bot$FastAPI_run.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1669143413888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../" />
-    <SUITE FILE_PATH="coverage/Shop_bot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1669580847758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tg_bot" />
+    <SUITE FILE_PATH="coverage/Shop_bot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1669642122564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tg_bot" />
     <SUITE FILE_PATH="coverage/Shop_service$run.coverage" NAME="run Coverage Results" MODIFIED="1668085023844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Shop_service$FastAPI_run.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1668171455137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../" />
     <SUITE FILE_PATH="coverage/Shop_service$main.coverage" NAME="main Coverage Results" MODIFIED="1668089998208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -23,7 +23,7 @@ authentication_backend = CheckUser(secret_key=JWT_SECRET)
 admin = Admin(app, engine, authentication_backend=authentication_backend)
 CategoryView.async_engine = engine
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="/static"), name="static")
 app.add_middleware(SessionMiddleware, secret_key=JWT_SECRET)
 
 

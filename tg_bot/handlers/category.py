@@ -51,8 +51,10 @@ async def category_chosen(callback_query: CallbackQuery, state: FSMContext, sess
             await state.update_data(parent_category=category)
         elif category in chosen_categories:
             chosen_categories.remove(category)
+            await state.update_data(parent_category=None)
         else:
             chosen_categories.append(category)
+            await state.update_data(parent_category=None)
 
         await state.update_data(chosen_categories=chosen_categories)
         await cmd_category(callback_query, state, category_list=sub_category_list)

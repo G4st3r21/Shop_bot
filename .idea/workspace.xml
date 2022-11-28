@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="Dockerfile" />
+    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="исправил путь static для admin">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/default.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="152593" />
+    <option name="totalTimeSeconds" value="154047" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -198,7 +204,7 @@
       <workItem from="1669380578044" duration="14633000" />
       <workItem from="1669415641289" duration="45000" />
       <workItem from="1669558057109" duration="6309000" />
-      <workItem from="1669570382628" duration="15326000" />
+      <workItem from="1669570382628" duration="17322000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1669131164998</created>
@@ -270,7 +276,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669648197476</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Dockerfile">
+      <created>1669648672117</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669648672117</updated>
+    </task>
+    <task id="LOCAL-00012" summary="исправил путь static для admin">
+      <created>1669648777450</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669648777450</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +320,8 @@
     <MESSAGE value="Поправил Dockerfile" />
     <MESSAGE value="Поправил метод get_all класса Products models.py" />
     <MESSAGE value="Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile" />
+    <MESSAGE value="исправил путь static для admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправил путь static для admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -321,7 +342,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LearningProject$main.coverage" NAME="main Coverage Results" MODIFIED="1667917684712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Shop_bot$FastAPI_run.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1669143413888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../" />
-    <SUITE FILE_PATH="coverage/Shop_bot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1669647179145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tg_bot" />
+    <SUITE FILE_PATH="coverage/Shop_bot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1669650369006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tg_bot" />
     <SUITE FILE_PATH="coverage/Shop_service$run.coverage" NAME="run Coverage Results" MODIFIED="1668085023844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Shop_service$FastAPI_run.coverage" NAME="FastAPI run Coverage Results" MODIFIED="1668171455137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../" />
     <SUITE FILE_PATH="coverage/Shop_service$main.coverage" NAME="main Coverage Results" MODIFIED="1668089998208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

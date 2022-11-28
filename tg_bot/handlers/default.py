@@ -11,6 +11,7 @@ async def default_message(callback_query: CallbackQuery, state: FSMContext):
     user_data = await state.get_data()
     await state.update_data(offset=0)
     await state.update_data(full_count=0)
+    await state.update_data(parent_category=None)
     chosen_gender = user_data['chosen_gender'] if user_data.get('chosen_gender') else "не выбрано"
     chosen_category = ', '.join(user_data['chosen_categories']) if user_data.get('chosen_categories') else "не выбраны"
     chosen_brands = ', '.join(user_data['chosen_brands']) if user_data.get('chosen_brands') else "не выбраны"

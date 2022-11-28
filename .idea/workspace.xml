@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="Не ту БД подключил(">
+    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="Исправил логику выбора категорий">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/handlers/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/handlers/category.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="150132" />
+    <option name="totalTimeSeconds" value="150709" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -203,7 +200,7 @@
       <workItem from="1669380578044" duration="14633000" />
       <workItem from="1669415641289" duration="45000" />
       <workItem from="1669558057109" duration="6309000" />
-      <workItem from="1669570382628" duration="11892000" />
+      <workItem from="1669570382628" duration="12539000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1669131164998</created>
@@ -240,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669581208260</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Исправил логику выбора категорий">
+      <created>1669642476828</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669642476828</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +270,8 @@
     <MESSAGE value="отладка" />
     <MESSAGE value="отладка категорий" />
     <MESSAGE value="Не ту БД подключил(" />
-    <option name="LAST_COMMIT_MESSAGE" value="Не ту БД подключил(" />
+    <MESSAGE value="Исправил логику выбора категорий" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил логику выбора категорий" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -280,16 +285,6 @@
           <url>file://$PROJECT_DIR$/tg_bot/handlers/products.py</url>
           <line>33</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tg_bot/handlers/category.py</url>
-          <line>72</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tg_bot/handlers/category.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

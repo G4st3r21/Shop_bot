@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="Поправил метод get_all класса Products models.py">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tg_bot/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/Dockerfile" afterDir="false" />
-    </list>
+    <list default="true" id="a4d6b854-ff25-4dd1-b9a1-94d64ab1de89" name="Changes" comment="Dockerfile" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="152284" />
+    <option name="totalTimeSeconds" value="152593" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -202,7 +198,7 @@
       <workItem from="1669380578044" duration="14633000" />
       <workItem from="1669415641289" duration="45000" />
       <workItem from="1669558057109" duration="6309000" />
-      <workItem from="1669570382628" duration="15017000" />
+      <workItem from="1669570382628" duration="15326000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1669131164998</created>
@@ -267,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669647407812</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Dockerfile">
+      <created>1669648197476</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669648197476</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +299,8 @@
     <MESSAGE value="Исправил логику выбора категорий" />
     <MESSAGE value="Поправил Dockerfile" />
     <MESSAGE value="Поправил метод get_all класса Products models.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поправил метод get_all класса Products models.py" />
+    <MESSAGE value="Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

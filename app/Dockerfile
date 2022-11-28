@@ -8,4 +8,4 @@ RUN python -m pip install --upgrade pip
 ADD requirements.txt .
 RUN pip install -U -r requirements.txt
 ADD . .
-CMD ["uvicorn", "main:app", "--port", "5000"]
+CMD ["uvicorn", "main:app", "--port", "5000", "--forwarded-allow-ips='*'", "--proxy-headers"]

@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-def generate_product_keyboard(link=None, need_menu_button=False, need_more_button=False):
+def generate_product_keyboard(link=None, need_menu_button=False, need_more_button=True):
     all_product_kb = InlineKeyboardMarkup()
     if link:
         all_product_kb.add(InlineKeyboardButton(text='Связаться с продавцом', url=link))

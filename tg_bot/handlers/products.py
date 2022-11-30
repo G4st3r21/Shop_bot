@@ -53,7 +53,7 @@ async def show_products(callback_query: CallbackQuery, state: FSMContext, sessio
     await state.update_data(full_count=full_count)
 
     if not product_list:
-        all_product_kb = generate_product_keyboard(need_menu_button=True)
+        all_product_kb = generate_product_keyboard(need_menu_button=True, need_more_button=False)
         await callback_query.message.answer("Больше товаров по выбранным фильтрам нет", reply_markup=all_product_kb)
 
     for product in product_list:
@@ -64,7 +64,7 @@ async def show_products(callback_query: CallbackQuery, state: FSMContext, sessio
         elif user_data.get('full_count') and offset+5 > user_data['full_count']:
             all_product_kb = generate_product_keyboard(seller_link, need_menu_button=True)
         else:
-            all_product_kb = generate_product_keyboard(seller_link, need_menu_button=True, need_more_button=True)
+            all_product_kb = generate_product_keyboard(seller_link, need_menu_button=True)
 
         pictures = await Picture.get(session, product.id)
         media = await get_product_media_group(pictures)

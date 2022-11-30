@@ -71,5 +71,11 @@ def register_handlers_brands(dp: Dispatcher):
         lambda c: c.data == 'brands',
         state=[UserFilters.choosing_brand, None]
     )
-    dp.register_callback_query_handler(brand_chosen, state=UserFilters.choosing_brand)
-    dp.register_callback_query_handler(brand_error, state=UserFilters.choosing_brand)
+    dp.register_callback_query_handler(
+        brand_chosen, lambda c: c.data != 'menu',
+        state=UserFilters.choosing_brand
+    )
+    dp.register_callback_query_handler(
+        brand_error, lambda c: c.data != 'menu',
+        state=UserFilters.choosing_brand
+    )

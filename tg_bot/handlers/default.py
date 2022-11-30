@@ -37,5 +37,5 @@ async def welcome_message(message: Message):
 
 
 def register_handlers_default(dp: Dispatcher):
-    dp.register_callback_query_handler(default_message, lambda c: c.data == 'back', state=['*'])
+    dp.register_callback_query_handler(default_message, lambda c: c.data == 'menu', state=['*'])
     dp.register_message_handler(welcome_message, commands=['start', 'help'])

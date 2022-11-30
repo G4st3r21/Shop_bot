@@ -10,14 +10,18 @@ from states import UserFilters
 
 
 @session_db
-async def cmd_category(callback_query: CallbackQuery, state: FSMContext, session: AsyncSession, category_list=None):
+async def cmd_category(callback_query: CallbackQuery, state: FSMContext, session: AsyncSession):
     await callback_query.answer()
 
     user_data = await state.get_data()
-    if not category_list:
+    parent_category = user_data['parent_category'] if 'parent_category' in user_data.keys() else None
+
+    if not parent_category:
         category_list = await Category.get_all(session)
         category_types_kb = await generate_category_buttons(category_list, user_data.get('chosen_categories', []))
     else:
+        parent_object = await Category.get_object(session, parent_category)
+        category_list = await Category.get_all(session, parent_object.id)
         category_types_kb = await generate_category_buttons(category_list, user_data.get('chosen_categories', []),
                                                             child=True)
 
@@ -36,7 +40,6 @@ async def category_chosen(callback_query: CallbackQuery, state: FSMContext, sess
 
     if category == 'delete':
         await state.update_data(chosen_categories=[])
-        await cmd_category(callback_query, state)
     elif category != 'back':
         category_obj = await Category.get_object(session, category) if category != 'all' else None
         sub_category_list = await Category.get_all(session, category_obj.id) if category_obj else []
@@ -51,13 +54,14 @@ async def category_chosen(callback_query: CallbackQuery, state: FSMContext, sess
             await state.update_data(parent_category=category)
         elif category in chosen_categories:
             chosen_categories.remove(category)
-            await state.update_data(parent_category=None)
         else:
             chosen_categories.append(category)
-            await state.update_data(parent_category=None)
 
         await state.update_data(chosen_categories=chosen_categories)
-        await cmd_category(callback_query, state, category_list=sub_category_list)
+    else:
+        await state.update_data(parent_category=None)
+
+    await cmd_category(callback_query, state)
 
 
 async def get_all_categories(session: AsyncSession, user_data, parent=None):
@@ -101,5 +105,11 @@ def register_handlers_category(dp: Dispatcher):
         cmd_category, lambda c: c.data == 'categories',
         state=[UserFilters.choosing_category, None]
     )
-    dp.register_callback_query_handler(category_chosen, state=UserFilters.choosing_category)
-    dp.register_callback_query_handler(category_error, state=UserFilters.choosing_category)
+    dp.register_callback_query_handler(
+        category_chosen, lambda c: c.data != 'menu',
+        state=UserFilters.choosing_category
+    )
+    dp.register_callback_query_handler(
+        category_error, lambda c: c.data != 'menu',
+        state=UserFilters.choosing_category
+    )

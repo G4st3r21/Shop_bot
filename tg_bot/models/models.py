@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from db_session import SqlAlchemyBase
-from sqlalchemy import Column, String, Integer, Boolean, ForeignKey, Table, select, update, func
+from sqlalchemy import Column, String, Integer, Boolean, ForeignKey, Table, select, update, func, desc
 
 
 class Brand(SqlAlchemyBase):
@@ -122,7 +122,7 @@ class Product(SqlAlchemyBase):
         brands_id = await Brand.get_all_id(session, chosen_brands) if chosen_brands else None
 
         if not need_count:
-            query = select(cls).where(cls.is_sold == False).offset(offset).limit(limit)
+            query = select(cls).where(cls.is_sold == False).offset(offset).limit(limit).order_by(desc(cls.id))
         else:
             query = select([func.count()]).select_from(cls).where(cls.is_sold == False)
         if brands_id:

@@ -28,11 +28,11 @@ async def main():
     bot = Bot(token=config.TOKEN)
     dp = Dispatcher(bot, storage=MemoryStorage())
 
-    register_handlers_default(dp)
     register_handlers_brands(dp)
     register_handlers_category(dp)
     register_handlers_gender(dp)
     register_handlers_products(dp)
+    register_handlers_default(dp)
 
     await dp.skip_updates()
     await dp.start_polling()

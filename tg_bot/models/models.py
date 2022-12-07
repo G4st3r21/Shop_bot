@@ -114,10 +114,6 @@ class Product(SqlAlchemyBase):
     @classmethod
     async def get_all(cls, session: AsyncSession, chosen_gender, chosen_categories, chosen_brands, offset=0, limit=None,
                       need_count=False):
-        if chosen_gender:
-            gender = True if chosen_gender == 'мужской' else False
-        else:
-            gender = None
         categories_id = await Category.get_all_id(session, chosen_categories) if chosen_categories else None
         brands_id = await Brand.get_all_id(session, chosen_brands) if chosen_brands else None
 
@@ -127,7 +123,8 @@ class Product(SqlAlchemyBase):
             query = select([func.count()]).select_from(cls).where(cls.is_sold == False)
         if brands_id:
             query = query.where(cls.brand_id.in_(brands_id))
-        if gender:
+        if chosen_gender:
+            gender = True if chosen_gender == 'мужской' else False
             query = query.where(cls.male == gender)
         if categories_id:
             query = query.where(cls.category_id.in_(categories_id))

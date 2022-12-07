@@ -21,8 +21,7 @@ async def default_message(callback_query: CallbackQuery, state: FSMContext):
         f"Вами были выбраны следующие фильтры:\n"
         f"-Пол: {chosen_gender}\n"
         f"-Категория: {chosen_category}\n"
-        f"-Бренды: {chosen_brands}\n\n"
-        "При выбранном бренде доступна кнопка 'Показать предложения'\n\n",
+        f"-Бренды: {chosen_brands}\n\n",
         reply_markup=all_types_kb
     )
 

@@ -67,8 +67,7 @@ async def brand_error(callback_query: CallbackQuery, state: FSMContext):
 
 def register_handlers_brands(dp: Dispatcher):
     dp.register_callback_query_handler(
-        cmd_brands,
-        lambda c: c.data == 'brands',
+        cmd_brands, lambda c: c.data == 'brands',
         state=[UserFilters.choosing_brand, None]
     )
     dp.register_callback_query_handler(
